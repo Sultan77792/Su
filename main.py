@@ -181,3 +181,6 @@ async def generate_excel(data: dict):
         media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
         headers={"Content-Disposition": f"attachment; filename=water_reservoirs_{data['date'].replace(' ', '_')}.xlsx"}
     )
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)

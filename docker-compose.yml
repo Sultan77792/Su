@@ -11,5 +11,12 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
+  web:  # Добавляем сервис для веб-приложения
+    build: ./backend  # Путь к твоему серверу (укажи правильный путь к папке с main.py)
+    ports:
+      - "8000:8000"  # Прокси-порт для сервера
+    depends_on:
+      - db  # Сервис зависит от базы данных
+
 volumes:
   postgres_data:
