@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #1a1a1a;
+}
+
+#cesiumContainer {
+    width: 85%;
+    height: 100vh;
+    float: left;
+}
+
+#dashboard {
+    width: 15%; /* Уменьшил с 30% до 20% */
+    height: 100vh;
+    float: right;
+    background: #251530;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center; /* Центрируем текст */
+}
+
+#reservoir-list {
+    list-style: none;
+    padding: 0;
+}
+
+.critical { color: red; }
+.warning { color: orange; }
